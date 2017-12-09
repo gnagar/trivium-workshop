@@ -15,7 +15,7 @@ node {
        if (isUnix()) {
          sh "docker build workspace/spring-boot-sample -t gauravnagar/trivium-my-sql"
       } else {
-         bat(/docker build workspace\spring-boot-sample -t gauravnagar/trivium-my-sql/)
+         bat(/docker build workspace\spring-boot-sample -t gauravnagar\/trivium-my-sql/)
       }
       
    }
