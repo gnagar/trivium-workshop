@@ -6,9 +6,9 @@ node {
    }
    stage('Build jar') {
       if (isUnix()) {
-         sh "'${mvnHome}/bin/mvn'  clean package"
+         sh "'${mvnHome}/bin/mvn' -f workspace/spring-boot-sample/pom.xml clean package"
       } else {
-         bat(/"${mvnHome}\bin\mvn"  clean package/)
+         bat(/"${mvnHome}\bin\mvn" -f workspace\spring-boot-sample\pom.xml clean package/)
       }
    }
    stage('Build docker image') {
