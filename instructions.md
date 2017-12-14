@@ -55,7 +55,10 @@ docker swarm join \
     --token <token value> \
     <Manager IP>:<Manager Port>
 ```
-
+## Adding db-node label
+```sh
+ db-node docker node update --label-add type=db-node <node id>
+```
 ## Using db-node label for database containers
 
 ```yaml
